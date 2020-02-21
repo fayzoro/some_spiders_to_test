@@ -7,8 +7,8 @@ import urllib.request
 def download_html():
     url = 'http://www.umei.cc/p/gaoqing/cn/202000.htm'
     html = urllib.request.urlopen(url).read().decode('utf-8')
-    # print(html)
-    filename = 'test_file/' + url[-10:-4] + '.html'
+    # print(htmls)
+    filename = 'test_file/' + url[-10:-4] + '.htmls'
     with open(filename, 'w', encoding='utf-8') as f:
         f.write(html)
         print('下载成功')

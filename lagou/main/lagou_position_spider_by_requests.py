@@ -34,7 +34,7 @@ class LagouPositionSpider(object):
         self.end_num = 78
         self.params_queue = Queue()
         self.html_queue = Queue()
-        self.save_html_dir = '../html/'
+        self.save_html_dir = '../htmls/'
         self.threadings = []
 
     def get_params_queue(self):
@@ -89,7 +89,7 @@ class LagouPositionSpider(object):
             # 获取页码和页面内容
             page_num, html = self.html_queue.get()
             # 设置函数名
-            file_name = self.save_html_dir + '第' + page_num + '页.html'
+            file_name = self.save_html_dir + '第' + page_num + '页.htmls'
             with open(file_name, 'w', encoding='utf-8') as f:
                 f.write(html)
                 print(file_name, '写入成功')

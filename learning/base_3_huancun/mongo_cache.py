@@ -27,9 +27,9 @@ class MongoCache:
     >>> cache = MongoCache()
     >>> cache.clear()
     >>> url = 'http://example.webscraping.com'
-    >>> result = {'html': '...'}
+    >>> result = {htmls: '...'}
     >>> cache[url] = result
-    >>> cache[url]['html'] == result['html']
+    >>> cache[url][htmls] == result[htmls]
     True
     >>> cache = MongoCache(expires=timedelta())
     >>> cache[url] = result

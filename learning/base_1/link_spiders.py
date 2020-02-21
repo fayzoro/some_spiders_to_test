@@ -68,8 +68,8 @@ def get_links(html):
 def main():
     url = 'http://www.umei.cc/p/gaoqing/cn/202000.htm'
     user_agent = 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.1 (KHTML, like Gecko) Chrome/14.0.835.163 Safari/535.1'
-    # html = download(url, user_agent=user_agent)
-    # print(html)
+    # htmls = download(url, user_agent=user_agent)
+    # print(htmls)
     link_crawler(url, link_regex=r"http://www.umei.cc/p/gaoqing/cn/(.*?).htm")
 
 if __name__ == '__main__':

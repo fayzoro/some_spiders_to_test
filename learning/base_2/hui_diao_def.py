@@ -77,18 +77,18 @@ def get_links(html):
     return webpage_regex.findall(html)
     # pattern_1 = '<li><a href="(.*?)" title="'
     # webpage_regex = re.compile(pattern=pattern_1)
-    # return webpage_regex.findall(html)
+    # return webpage_regex.findall(htmls)
 
 
-# def scrape_callback(url, html):
+# def scrape_callback(url, htmls):
 #     '''
 #
 #     :param url:
-#     :param html:
+#     :param htmls:
 #     :return:
 #     '''
 #     if re.search('/view/', url):
-#         tree = lxml.html.fromstring(html)
+#         tree = lxml.htmls.fromstring(htmls)
 #         row = [tree.cssselect('table > tr#places_%s_row > td.w2p_fw' % field)[0].text_content() for field in FIELDS]
 #         print(url, row)
 #     pass

@@ -5,9 +5,9 @@
 from bs4 import BeautifulSoup
 
 # 有缺失的页面
-broken_html = '<html><body><ul><li class="word" href="www.baidu.com">hello</li><li>world</li><li class="word">take</html>'
+broken_html = '<htmls><body><ul><li class="word" href="www.baidu.com">hello</li><li>world</li><li class="word">take</htmls>'
 # 对缺失的标签进行添加
-soup = BeautifulSoup(broken_html, 'html.parser')
+soup = BeautifulSoup(broken_html, 'htmls.parser')
 fixed_html = soup.prettify()
 print(fixed_html)
 

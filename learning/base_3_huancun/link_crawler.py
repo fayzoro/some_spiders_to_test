@@ -90,7 +90,7 @@ def get_robots(url):
 
 
 def get_links(html):
-    """Return a list of links from html
+    """Return a list of links from htmls
     """
     # a regular expression to extract all links from the webpage
     webpage_regex = re.compile('<a[^>]+href=["\'](.*?)["\']', re.IGNORECASE)

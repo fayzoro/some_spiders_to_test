@@ -87,7 +87,7 @@ class Downloader(object):
             result = self.download(url, headers, proxy, self.num_retries)
             if self.cache:
                 self.cache[url] = result
-        return result['html']
+        return result['htmls']
 
     def download(url, user_agent='wswp', proxy=None, num_retries=2):
         '''
@@ -116,7 +116,7 @@ class Downloader(object):
                 if hasattr(e, 'code') and 500 <= e.code < 600:
                     # retry download
                     html = download(url, 'wswp', proxy, num_retries-1)
-        return {'html': html, 'code': code}
+        return {'htmls': html, 'code': code}
 
 
 if __name__ == '__main__':

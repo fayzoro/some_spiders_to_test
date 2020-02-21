@@ -32,9 +32,9 @@ class DiskCache:
 
     >>> cache = DiskCache()
     >>> url = 'http://example.webscraping.com'
-    >>> result = {'html': '...'}
+    >>> result = {'htmls': '...'}
     >>> cache[url] = result
-    >>> cache[url]['html'] == result['html']
+    >>> cache[url]['htmls'] == result['htmls']
     True
     >>> cache = DiskCache(expires=timedelta())
     >>> cache[url] = result
@@ -100,12 +100,12 @@ class DiskCache:
         """Create file system path for this URL
         """
         components = urllib.request.urlsplit(url)
-        # when empty path set to /index.html
+        # when empty path set to /index.htmls
         path = components.path
         if not path:
-            path = '/index.html'
+            path = '/index.htmls'
         elif path.endswith('/'):
-            path += 'index.html'
+            path += 'index.htmls'
         filename = components.netloc + path + components.query
         # replace invalid characters
         filename = re.sub('[^/0-9a-zA-Z\-.,;_ ]', '_', filename)

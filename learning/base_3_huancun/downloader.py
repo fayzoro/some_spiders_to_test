@@ -55,7 +55,7 @@ class Downloader:
             if self.cache:
                 # save result to cache
                 self.cache[url] = result
-        return result['html']
+        return result['htmls']
 
     def download(self, url, headers, proxy, num_retries, data=None):
         print('Downloading:', url)
@@ -78,7 +78,7 @@ class Downloader:
                     return self.download(url, headers, proxy, num_retries - 1, data)
             else:
                 code = None
-        return {'html': html, 'code': code}
+        return {'htmls': html, 'code': code}
 
 
 class Throttle:
